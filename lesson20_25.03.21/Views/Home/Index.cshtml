@@ -1,0 +1,28 @@
+﻿@model List<Person>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <div class="text-center" style="display: block; background-color:darkgray">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Фамилия</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Отчество</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <th scope="row">@p.Id</th>
+                        <td>@p.LastName</td>
+                        <td>@p.FirstName</td>
+                        <td>@p.MiddleName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
